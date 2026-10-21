@@ -5,6 +5,8 @@ import { claim, normalizeLedger, pruneLedger, ready, type AlertRow, type Ledger 
 import { bindPro, SPONSORS } from './pro';
 import { AlertSettingTab } from './settings';
 import { AlertView, VIEW_ID, viewOptions } from './view';
+import { setupHello } from './hello/index';
+import WHATS_NEW from './whats-new.json';
 
 export default class DatePropertyAlertsPlugin extends Plugin {
  readonly startedAt = Date.now();
@@ -14,6 +16,8 @@ export default class DatePropertyAlertsPlugin extends Plugin {
  readonly views = new Set<AlertView>();
  private notices = new Map<string, { notice: Notice; cleanup: () => void }>();
  onload(): void {
+   // First: "What's new" reads its state before the settings load (packages/hello). It does not wait.
+   setupHello(this, WHATS_NEW);
   this.ledger = normalizeLedger(this.app.loadLocalStorage(`${this.manifest.id}-deliveries`));
   const pro = createGitHubSponsors(this.app, this.manifest.id, SPONSORS, this);
   pro.init(); this.pro = pro; bindPro(pro);

@@ -36,7 +36,7 @@ Free includes Snooze 15 minutes for every due entry. Pro adds one hour, one day,
 
 ## Install
 
-Install Date Property Alerts from Community plugins when it is available in the directory, then enable it. For a manual installation, put the release's main.js, manifest.json, and styles.css in a date-property-alerts folder under your vault's community plugins folder. Reload Obsidian and enable the entry. Use the minimum app version shown in the manifest or a newer release.
+Install Date Property Alerts from Community plugins, then enable it. For a manual installation, put the release's main.js, manifest.json, and styles.css in a date-property-alerts folder under your vault's community plugins folder. Reload Obsidian and enable the entry. Use the minimum app version shown in the manifest or a newer release.
 
 Enable the core Bases plugin before setting up a source. No task manager, external notification service, account, or payment is needed for free alerts.
 
@@ -51,6 +51,8 @@ Date-only values use the selected hour in your device's timezone. Times without 
 For a daily dashboard, embed the base in a note and select its Alerts view. Keep that dashboard loaded. If you use several bases, matching note, property, and stored date combinations share delivery history. Different properties have separate identities even if their dates are equal. Renaming a note gives it a new path and therefore a new identity.
 
 ## Settings
+
+After a minor or major update, this plugin opens one What's new tab in the background. The tab and settings card suggest other NoteMods plugins and Zovo Chat and link to notemods.com for feedback ([privacy](https://notemods.com/privacy/)). The tab sends no data. Turn the tab off in Settings.
 
 View options control the date property, the hour for date-only values, and Enable notices. Turn notices off to inspect the list without consuming delivery history. Turning them back on resumes alerts for monitored dates. Past dates first seen after startup stay quiet until you snooze them or change their date. A delivered item remains visible for review rather than disappearing from your source.
 
