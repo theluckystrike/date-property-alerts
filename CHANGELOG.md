@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1
+
+### Patch Changes
+
+- 596e25a: The Alerts view now shows Snooze 1 hour, Snooze 1 day and Snooze custom without Pro. They show how to get Pro, with a Sponsor on GitHub button, and do not snooze until Pro is on.
+
 ## 1.2.0
 
 ### Minor Changes

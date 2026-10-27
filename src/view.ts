@@ -1,6 +1,6 @@
 import { BasesView, DateValue, StringValue, type BasesAllOptions, type QueryController } from 'obsidian';
 import { dismiss, dueCount, observe, ready, rowsFor, snooze, type AlertRow } from './alerts';
-import { isPro, onProChange } from './pro';
+import { isPro, onProChange, PRO_SNOOZE, proNotice } from './pro';
 import type DatePropertyAlertsPlugin from './main';
 
 export const VIEW_ID = 'date-property-alerts';
@@ -73,12 +73,15 @@ export class AlertView extends BasesView {
    });
   };
   addSnooze('15 minutes', 15);
-  if (isPro()) {
-   addSnooze('1 hour', 60); addSnooze('1 day', 1440);
-   const input = actions.createEl('input', { type: 'number', attr: { min: '1', max: '10080', 'aria-label': 'Custom snooze minutes', placeholder: 'Minutes' } });
-   actions.createEl('button', { text: 'Snooze custom' }).addEventListener('click', () => {
-    if (snooze(row, this.host.ledger, Date.now(), Number(input.value), isPro())) { this.host.cancelNotice(row.key); this.host.persist(); this.host.refreshViews(); }
+  // The Pro snoozes show for every user. A free select shows the Pro notice and does not snooze.
+  const addProSnooze = (label: string, minutes: () => number) => {
+   actions.createEl('button', { text: `Snooze ${label}` }).addEventListener('click', () => {
+    if (!isPro()) { proNotice(PRO_SNOOZE); return; }
+    if (snooze(row, this.host.ledger, Date.now(), minutes(), isPro())) { this.host.cancelNotice(row.key); this.host.persist(); this.host.refreshViews(); }
    });
-  }
+  };
+  addProSnooze('1 hour', () => 60); addProSnooze('1 day', () => 1440);
+  const input = actions.createEl('input', { type: 'number', attr: { min: '1', max: '10080', 'aria-label': 'Custom snooze minutes', placeholder: 'Minutes' } });
+  addProSnooze('custom', () => Number(input.value));
  }
 }

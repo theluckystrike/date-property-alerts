@@ -1,7 +1,6 @@
 {
 	"name": "date-property-alerts",
-	"repository": {"type": "git", "url": "theluckystrike/date-property-alerts.git"},
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"private": true,
 	"description": "Get notices when date properties in a filtered base come due.",
 	"main": "main.js",

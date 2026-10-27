@@ -30,7 +30,7 @@ Each clicked notice is remembered on this device for this vault. History older t
 
 <img src="https://raw.githubusercontent.com/theluckystrike/date-property-alerts/HEAD/docs/pro-snooze.png" alt="Custom snooze controls and a wake time in a demo vault" width="720">
 
-Free includes Snooze 15 minutes for every due entry. Pro adds one hour, one day, and a custom duration from 1 to 10,080 minutes. Snooze requests another reminder without moving the original due date. The list shows the wake time. A snooze is stored locally and sends another notice after its wake time when the source is available. Existing snoozes still finish if your Pro access ends.
+Free includes Snooze 15 minutes for every due entry. Pro adds one hour, one day, and a custom duration from 1 to 10,080 minutes. Without Pro, these three buttons show a Sponsor on GitHub notice and do not snooze. Snooze requests another reminder without moving the original due date. The list shows the wake time. A snooze is stored locally and sends another notice after its wake time when the source is available. Existing snoozes still finish if your Pro access ends.
 
 <img src="https://raw.githubusercontent.com/theluckystrike/date-property-alerts/HEAD/docs/workflow.gif" alt="Open an alert source and follow a due note" width="720">
 

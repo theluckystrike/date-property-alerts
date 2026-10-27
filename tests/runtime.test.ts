@@ -76,8 +76,11 @@ describe('notice and view lifecycle',()=>{
  });
  it('updates Pro controls immediately on a sponsorship change',()=>{
   let pro=false; let change=()=>{}; const stop=vi.fn();
-  bindPro({isPro:()=>pro,onChange:(cb:()=>void)=>{change=cb;return stop;}} as never);
-  const p=host(); view(p); expect(document.body.textContent).not.toContain('Snooze custom'); pro=true; change();
-  expect(document.body.textContent).toContain('Snooze custom'); p.onunload(); expect(stop).toHaveBeenCalledOnce();
+  bindPro({isPro:()=>pro,onChange:(cb:()=>void)=>{change=cb;return stop;},hasToken:()=>false,isChecking:()=>false,getState:()=>({status:'unchecked',lastAttemptAt:0}),config:{sponsorLogin:'theluckystrike',source:'date-property-alerts'}} as never);
+  const p=host(); view(p);
+  // A free select of a Pro snooze does not snooze. After the Pro change, the same button snoozes at once.
+  Array.from(document.querySelectorAll('button')).find(b=>b.textContent==='Snooze 1 hour')!.click(); expect(document.body.textContent).not.toContain('Until');
+  pro=true; change();
+  Array.from(document.querySelectorAll('button')).find(b=>b.textContent==='Snooze 1 hour')!.click(); expect(document.body.textContent).toContain('Until'); p.onunload(); expect(stop).toHaveBeenCalledOnce();
  });
 });
