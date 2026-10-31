@@ -4,7 +4,7 @@ Get a notice when a note's date property comes due. Add an Alerts view to a base
 
 <img src="https://raw.githubusercontent.com/theluckystrike/date-property-alerts/HEAD/docs/alerts.png" alt="Filtered note dates in the Alerts view" width="720">
 
-Free includes all alert sources, due notices, opening notes, dismissal, a 15-minute snooze, and saved delivery history. Pro adds one-hour, one-day and custom snooze durations: $15 one time or $5 a month. [See Pro](https://github.com/sponsors/theluckystrike?metadata_source=date-property-alerts) or [get the $15 one-time offer](https://github.com/sponsors/theluckystrike/sponsorships?tier_id=666162&metadata_source=date-property-alerts).
+Free includes all alert sources, due notices, opening notes, dismissal, a 15-minute snooze, and saved delivery history. Pro adds one-hour, one-day and custom snooze durations: $15 one time or $5 a month. [See Pro](https://github.com/sponsors/theluckystrike?frequency=one-time&metadata_source=date-property-alerts) or [get the $15 one-time offer](https://github.com/sponsors/theluckystrike/sponsorships?tier_id=666162&metadata_source=date-property-alerts).
 
 Keep an Alerts view or embed open while Obsidian runs. Notices appear inside the app on desktop and mobile. Closing the app, suspending it on a phone, closing the view, or switching that view to a table stops monitoring for that source. Use it for a working dashboard; it cannot deliver an alarm while your device sleeps.
 
@@ -72,7 +72,7 @@ Can I repeat the same date automatically? Recurrence is not included. Set a new 
 
 The core features are free. Pro features need a GitHub Sponsors sponsorship of theluckystrike: $5 a month or more, or $15 once. A total payment of $15 meets the payment requirement for Pro without further payment. Sign-in and the checks below still apply. Your notes stay readable and editable with or without Pro.
 
-GitHub handles the payment. Sponsor at https://github.com/sponsors/theluckystrike. You need no account for the free features. Pro needs the GitHub account that sponsors.
+GitHub handles the payment. Sponsor at https://github.com/sponsors/theluckystrike?frequency=one-time&metadata_source=date-property-alerts. You need no account for the free features. Pro needs the GitHub account that sponsors.
 
 Until you select "Sign in with GitHub" in the settings, Date Property Alerts makes no network requests. Sign in uses the GitHub device flow. Date Property Alerts sends its public client ID and the scope `read:user` to `https://github.com/login/device/code` and shows you a code. While you enter the code at https://github.com/login/device, it asks `https://github.com/login/oauth/access_token` every few seconds to check the sign-in status. The scope permits profile reads only. GitHub needs this access to show the sponsorship tier. It grants no repository scope and no write access.
 
