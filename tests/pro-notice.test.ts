@@ -23,7 +23,7 @@ import type { Ledger } from '../src/alerts';
 // shared Pro notice with the "Sponsor on GitHub" button. The alert does not snooze and nothing is saved.
 // A Pro user snoozes with the same buttons.
 const LEAD = 'Snoozes of 1 hour, 1 day or a custom length need Pro.';
-const PITCH = 'Sponsor on GitHub, then sign in from the plugin settings.';
+const PITCH = 'One payment turns on Pro in every NoteMods plugin. Sponsor on GitHub, then sign in from the plugin settings.';
 
 function fakePro(pro: boolean): SponsorsManager {
  return {

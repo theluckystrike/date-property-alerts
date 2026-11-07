@@ -1,9 +1,9 @@
 {
 	"id": "date-property-alerts",
 	"name": "Date Property Alerts",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"changes": [
-		"The Alerts view now shows Snooze 1 hour, Snooze 1 day and Snooze custom without Pro. They show how to get Pro, with a Sponsor on GitHub button, and do not snooze until Pro is on."
+		"The Pro notice of Date Property Alerts now says that one payment turns on Pro in every NoteMods plugin."
 	],
 	"tip": "Embed the base in a daily note and pick its Alerts view. Alerts then run while that note is open.",
 	"thanks": "Hi, I am Michael, a solo developer in Poland. Date Property Alerts is one of over 100 small plugins that I make. Thank you for using it to keep track of your dates.",
