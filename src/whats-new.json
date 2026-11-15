@@ -1,7 +1,7 @@
 {
 	"id": "date-property-alerts",
 	"name": "Date Property Alerts",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"changes": [
 		"The Pro notice of Date Property Alerts now says that one payment turns on Pro in every NoteMods plugin."
 	],
